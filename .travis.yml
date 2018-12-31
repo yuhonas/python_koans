@@ -20,7 +20,7 @@ script:
 #   lines above!
 #
 notifications:
-  email: true
+  email: false
 
 # Some other koans (see runner/sensei.py or "ls koans" to see the light):
 #
