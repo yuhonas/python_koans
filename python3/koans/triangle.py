@@ -17,8 +17,18 @@
 #   about_triangle_project_2.py
 #
 def triangle(a, b, c):
-    # DELETE 'PASS' AND WRITE THIS CODE
-    pass
+    if a <= 0 or b <= 0 or c <= 0 or a+b < c or b+c < a or c+a < b:
+        raise(TriangleError)
+
+    set_length = len({a,b,c})
+    
+    if set_length == 1:
+        return 'equilateral'
+    elif set_length == 2:
+        return 'isosceles'
+    else:
+        return 'scalene'
+
 
 # Error class used in part 2.  No need to change this code.
 class TriangleError(Exception):
